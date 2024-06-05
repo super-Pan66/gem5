@@ -118,11 +118,13 @@ RoutingUnit::lookupRoutingTable(int vnet, NetDest msg_destination)
         }
     }
 
+    DPRINTF(RubyNetwork, "pcy m_routing_table[vnet].size() %s\n",
+                        m_routing_table[vnet].size());
     // Collect all candidate output links with this minimum weight
     for (int link = 0; link < m_routing_table[vnet].size(); link++) {
+
         if (msg_destination.intersectionIsNotEmpty(
             m_routing_table[vnet][link])) {
-
             if (m_weight_table[link] == min_weight) {
                 num_candidates++;
                 output_link_candidates.push_back(link);
@@ -268,6 +270,8 @@ RoutingUnit::outportComputeCustom(RouteInfo route,
                                  PortDirection inport_dirn)
 {
     panic("%s placeholder executed", __FUNCTION__);
+
+
 }
 
 } // namespace garnet

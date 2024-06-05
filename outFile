@@ -1,0 +1,729 @@
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 23.1.0.0
+gem5 compiled May 15 2024 21:17:59
+gem5 started May 17 2024 21:47:17
+gem5 executing on X86-32, pid 2026421
+command line: ./build/X86/gem5.opt configs/deprecated/example/se.py --num-cpus=64 --num-dirs=80 --cpu-type=DerivO3CPU --cpu-clock=2.5GHz --caches --l1d_size=64kB --l1d_assoc=8 --l1i_size=32kB --l1i_assoc=8 --l2cache --num-l2caches=32 --mem-type=SimpleMemory --mem-size=8GB --ruby --network=garnet --topology=KiteLarge_EWMC --mesh-rows=4 --num-chiplets=4 --concentration-factor=4 --num-mem-ctrls=32 -c tests/test-progs/hello/bin/x86/linux/hello
+
+176
+nodes:
+ [<m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875885f70>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875892670>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387589dcd0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758a6370>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758ab9d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758b4070>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758b96d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758bdd30>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758473d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387584ba30>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758540d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387585a730>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387585ed90>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875868430>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387586ba90>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875875130>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875879790>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387587edf0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875808490>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387580caf0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875816190>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387581a7f0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387581ee50>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758284f0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387582cb50>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38758361f0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875839850>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387583feb0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757c8550>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757cdbb0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757d5250>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757da8b0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757def10>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757e85b0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757ecc10>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757f52b0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757fa910>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757fef70>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875788610>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387578cc70>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875796310>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387579a970>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387579ffd0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757a9670>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757adcd0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757b7370>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757ba9d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757c3070>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757486d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387574cd30>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f38757563d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387575aa30>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875f4a220>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875f5d610>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875897c70>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875769310>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387576d970>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875773fd0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387577c670>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875781cd0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387570a370>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387570f9d0>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f3875717070>, <m5.objects.L1Cache_Controller.L1Cache_Controller object at 0x7f387571d6d0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875721880>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875724640>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f387572c400>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38757301c0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875730f40>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875736d00>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f387573aac0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f387573e880>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756c5640>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756c9400>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756cf1c0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756cff40>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756d3d00>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756d9ac0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756dd880>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756e2640>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756e7400>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756ec1c0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756ecf40>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756f1d00>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756f6ac0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756fb880>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875701640>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875685400>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f387568c1c0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f387568cf40>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875690d00>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f3875694ac0>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f387569a880>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f387569e640>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756a4430>, <m5.objects.L2Cache_Controller.L2Cache_Controller object at 0x7f38756a81f0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756a8dc0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756ae250>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756ae5e0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756ae910>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756aec40>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756aef70>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b3250>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b3610>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b3940>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b3c70>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b3fa0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b92b0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b9640>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b9970>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b9ca0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756b9fd0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756be2b0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756be670>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756be9a0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756becd0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756bec10>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756c4310>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756c46a0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756c49d0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756c4d00>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756c4cd0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875649340>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756496d0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875649a00>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875649d30>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875649fa0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387564e340>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387564e700>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387564ea30>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387564ed60>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387564efd0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756533a0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875653730>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875653a60>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875653d90>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875653d60>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875658400>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875658760>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875658a90>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875658dc0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875658d90>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387565e430>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387565e790>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387565eac0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387565edf0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387565edc0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875663460>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756637c0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875663af0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875663e20>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756690d0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875669460>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756697f0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875669b20>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875669e50>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387566d130>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387566d4f0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387566d820>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387566db50>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387566de80>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875672160>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875672520>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875672850>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875672b80>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875672eb0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f38756791c0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875679550>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875679880>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875679bb0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f3875679ee0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387567d1c0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387567d580>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387567d8b0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387567dbe0>, <m5.objects.Directory_Controller.Directory_Controller object at 0x7f387567df10>]
+ExtLink 0: CPUNode<->Router[0]
+ExtLink 1: CPUNode<->Router[1]
+ExtLink 2: CPUNode<->Router[2]
+ExtLink 3: CPUNode<->Router[3]
+ExtLink 4: CPUNode<->Router[8]
+ExtLink 5: CPUNode<->Router[9]
+ExtLink 6: CPUNode<->Router[10]
+ExtLink 7: CPUNode<->Router[11]
+ExtLink 8: CPUNode<->Router[16]
+ExtLink 9: CPUNode<->Router[17]
+ExtLink 10: CPUNode<->Router[18]
+ExtLink 11: CPUNode<->Router[19]
+ExtLink 12: CPUNode<->Router[24]
+ExtLink 13: CPUNode<->Router[25]
+ExtLink 14: CPUNode<->Router[26]
+ExtLink 15: CPUNode<->Router[27]
+DirNode  <orphan System>.ruby.dir_cntrl0
+ExtLink 16: DirNode[96]<->Router[0]
+DirNode  <orphan System>.ruby.dir_cntrl1
+ExtLink 17: DirNode[97]<->Router[1]
+DirNode  <orphan System>.ruby.dir_cntrl2
+ExtLink 18: DirNode[98]<->Router[2]
+DirNode  <orphan System>.ruby.dir_cntrl3
+ExtLink 19: DirNode[99]<->Router[3]
+DirNode  <orphan System>.ruby.dir_cntrl8
+ExtLink 20: DirNode[104]<->Router[8]
+DirNode  <orphan System>.ruby.dir_cntrl9
+ExtLink 21: DirNode[105]<->Router[9]
+DirNode  <orphan System>.ruby.dir_cntrl10
+ExtLink 22: DirNode[106]<->Router[10]
+DirNode  <orphan System>.ruby.dir_cntrl11
+ExtLink 23: DirNode[107]<->Router[11]
+DirNode  <orphan System>.ruby.dir_cntrl16
+ExtLink 24: DirNode[112]<->Router[16]
+DirNode  <orphan System>.ruby.dir_cntrl17
+ExtLink 25: DirNode[113]<->Router[17]
+DirNode  <orphan System>.ruby.dir_cntrl18
+ExtLink 26: DirNode[114]<->Router[18]
+DirNode  <orphan System>.ruby.dir_cntrl19
+ExtLink 27: DirNode[115]<->Router[19]
+DirNode  <orphan System>.ruby.dir_cntrl24
+ExtLink 28: DirNode[120]<->Router[24]
+DirNode  <orphan System>.ruby.dir_cntrl25
+ExtLink 29: DirNode[121]<->Router[25]
+DirNode  <orphan System>.ruby.dir_cntrl26
+ExtLink 30: DirNode[122]<->Router[26]
+DirNode  <orphan System>.ruby.dir_cntrl27
+ExtLink 31: DirNode[123]<->Router[27]
+IntLink 32: Router[0]->Router[1]
+IntLink 33: Router[1]->Router[2]
+IntLink 34: Router[2]->Router[3]
+IntLink 35: Router[8]->Router[9]
+IntLink 36: Router[9]->Router[10]
+IntLink 37: Router[10]->Router[11]
+IntLink 38: Router[16]->Router[17]
+IntLink 39: Router[17]->Router[18]
+IntLink 40: Router[18]->Router[19]
+IntLink 41: Router[24]->Router[25]
+IntLink 42: Router[25]->Router[26]
+IntLink 43: Router[26]->Router[27]
+IntLink 44: Router[1]->Router[0]
+IntLink 45: Router[2]->Router[1]
+IntLink 46: Router[3]->Router[2]
+IntLink 47: Router[9]->Router[8]
+IntLink 48: Router[10]->Router[9]
+IntLink 49: Router[11]->Router[10]
+IntLink 50: Router[17]->Router[16]
+IntLink 51: Router[18]->Router[17]
+IntLink 52: Router[19]->Router[18]
+IntLink 53: Router[25]->Router[24]
+IntLink 54: Router[26]->Router[25]
+IntLink 55: Router[27]->Router[26]
+IntLink 56: Router[0]->Router[8]
+IntLink 57: Router[1]->Router[9]
+IntLink 58: Router[2]->Router[10]
+IntLink 59: Router[3]->Router[11]
+IntLink 60: Router[8]->Router[16]
+IntLink 61: Router[9]->Router[17]
+IntLink 62: Router[10]->Router[18]
+IntLink 63: Router[11]->Router[19]
+IntLink 64: Router[16]->Router[24]
+IntLink 65: Router[17]->Router[25]
+IntLink 66: Router[18]->Router[26]
+IntLink 67: Router[19]->Router[27]
+IntLink 68: Router[8]->Router[0]
+IntLink 69: Router[9]->Router[1]
+IntLink 70: Router[10]->Router[2]
+IntLink 71: Router[11]->Router[3]
+IntLink 72: Router[16]->Router[8]
+IntLink 73: Router[17]->Router[9]
+IntLink 74: Router[18]->Router[10]
+IntLink 75: Router[19]->Router[11]
+IntLink 76: Router[24]->Router[16]
+IntLink 77: Router[25]->Router[17]
+IntLink 78: Router[26]->Router[18]
+IntLink 79: Router[27]->Router[19]
+ExtLink 80: CPUNode<->Router[4]
+ExtLink 81: CPUNode<->Router[5]
+ExtLink 82: CPUNode<->Router[6]
+ExtLink 83: CPUNode<->Router[7]
+ExtLink 84: CPUNode<->Router[12]
+ExtLink 85: CPUNode<->Router[13]
+ExtLink 86: CPUNode<->Router[14]
+ExtLink 87: CPUNode<->Router[15]
+ExtLink 88: CPUNode<->Router[20]
+ExtLink 89: CPUNode<->Router[21]
+ExtLink 90: CPUNode<->Router[22]
+ExtLink 91: CPUNode<->Router[23]
+ExtLink 92: CPUNode<->Router[28]
+ExtLink 93: CPUNode<->Router[29]
+ExtLink 94: CPUNode<->Router[30]
+ExtLink 95: CPUNode<->Router[31]
+DirNode  <orphan System>.ruby.dir_cntrl4
+ExtLink 96: DirNode[100]<->Router[4]
+DirNode  <orphan System>.ruby.dir_cntrl5
+ExtLink 97: DirNode[101]<->Router[5]
+DirNode  <orphan System>.ruby.dir_cntrl6
+ExtLink 98: DirNode[102]<->Router[6]
+DirNode  <orphan System>.ruby.dir_cntrl7
+ExtLink 99: DirNode[103]<->Router[7]
+DirNode  <orphan System>.ruby.dir_cntrl12
+ExtLink 100: DirNode[108]<->Router[12]
+DirNode  <orphan System>.ruby.dir_cntrl13
+ExtLink 101: DirNode[109]<->Router[13]
+DirNode  <orphan System>.ruby.dir_cntrl14
+ExtLink 102: DirNode[110]<->Router[14]
+DirNode  <orphan System>.ruby.dir_cntrl15
+ExtLink 103: DirNode[111]<->Router[15]
+DirNode  <orphan System>.ruby.dir_cntrl20
+ExtLink 104: DirNode[116]<->Router[20]
+DirNode  <orphan System>.ruby.dir_cntrl21
+ExtLink 105: DirNode[117]<->Router[21]
+DirNode  <orphan System>.ruby.dir_cntrl22
+ExtLink 106: DirNode[118]<->Router[22]
+DirNode  <orphan System>.ruby.dir_cntrl23
+ExtLink 107: DirNode[119]<->Router[23]
+DirNode  <orphan System>.ruby.dir_cntrl28
+ExtLink 108: DirNode[124]<->Router[28]
+DirNode  <orphan System>.ruby.dir_cntrl29
+ExtLink 109: DirNode[125]<->Router[29]
+DirNode  <orphan System>.ruby.dir_cntrl30
+ExtLink 110: DirNode[126]<->Router[30]
+DirNode  <orphan System>.ruby.dir_cntrl31
+ExtLink 111: DirNode[127]<->Router[31]
+IntLink 112: Router[4]->Router[5]
+IntLink 113: Router[5]->Router[6]
+IntLink 114: Router[6]->Router[7]
+IntLink 115: Router[12]->Router[13]
+IntLink 116: Router[13]->Router[14]
+IntLink 117: Router[14]->Router[15]
+IntLink 118: Router[20]->Router[21]
+IntLink 119: Router[21]->Router[22]
+IntLink 120: Router[22]->Router[23]
+IntLink 121: Router[28]->Router[29]
+IntLink 122: Router[29]->Router[30]
+IntLink 123: Router[30]->Router[31]
+IntLink 124: Router[5]->Router[4]
+IntLink 125: Router[6]->Router[5]
+IntLink 126: Router[7]->Router[6]
+IntLink 127: Router[13]->Router[12]
+IntLink 128: Router[14]->Router[13]
+IntLink 129: Router[15]->Router[14]
+IntLink 130: Router[21]->Router[20]
+IntLink 131: Router[22]->Router[21]
+IntLink 132: Router[23]->Router[22]
+IntLink 133: Router[29]->Router[28]
+IntLink 134: Router[30]->Router[29]
+IntLink 135: Router[31]->Router[30]
+IntLink 136: Router[4]->Router[12]
+IntLink 137: Router[5]->Router[13]
+IntLink 138: Router[6]->Router[14]
+IntLink 139: Router[7]->Router[15]
+IntLink 140: Router[12]->Router[20]
+IntLink 141: Router[13]->Router[21]
+IntLink 142: Router[14]->Router[22]
+IntLink 143: Router[15]->Router[23]
+IntLink 144: Router[20]->Router[28]
+IntLink 145: Router[21]->Router[29]
+IntLink 146: Router[22]->Router[30]
+IntLink 147: Router[23]->Router[31]
+IntLink 148: Router[12]->Router[4]
+IntLink 149: Router[13]->Router[5]
+IntLink 150: Router[14]->Router[6]
+IntLink 151: Router[15]->Router[7]
+IntLink 152: Router[20]->Router[12]
+IntLink 153: Router[21]->Router[13]
+IntLink 154: Router[22]->Router[14]
+IntLink 155: Router[23]->Router[15]
+IntLink 156: Router[28]->Router[20]
+IntLink 157: Router[29]->Router[21]
+IntLink 158: Router[30]->Router[22]
+IntLink 159: Router[31]->Router[23]
+ExtLink 160: CPUNode<->Router[32]
+ExtLink 161: CPUNode<->Router[33]
+ExtLink 162: CPUNode<->Router[34]
+ExtLink 163: CPUNode<->Router[35]
+ExtLink 164: CPUNode<->Router[40]
+ExtLink 165: CPUNode<->Router[41]
+ExtLink 166: CPUNode<->Router[42]
+ExtLink 167: CPUNode<->Router[43]
+ExtLink 168: CPUNode<->Router[48]
+ExtLink 169: CPUNode<->Router[49]
+ExtLink 170: CPUNode<->Router[50]
+ExtLink 171: CPUNode<->Router[51]
+ExtLink 172: CPUNode<->Router[56]
+ExtLink 173: CPUNode<->Router[57]
+ExtLink 174: CPUNode<->Router[58]
+ExtLink 175: CPUNode<->Router[59]
+DirNode  <orphan System>.ruby.dir_cntrl32
+ExtLink 176: DirNode[128]<->Router[32]
+DirNode  <orphan System>.ruby.dir_cntrl33
+ExtLink 177: DirNode[129]<->Router[33]
+DirNode  <orphan System>.ruby.dir_cntrl34
+ExtLink 178: DirNode[130]<->Router[34]
+DirNode  <orphan System>.ruby.dir_cntrl35
+ExtLink 179: DirNode[131]<->Router[35]
+DirNode  <orphan System>.ruby.dir_cntrl40
+ExtLink 180: DirNode[136]<->Router[40]
+DirNode  <orphan System>.ruby.dir_cntrl41
+ExtLink 181: DirNode[137]<->Router[41]
+DirNode  <orphan System>.ruby.dir_cntrl42
+ExtLink 182: DirNode[138]<->Router[42]
+DirNode  <orphan System>.ruby.dir_cntrl43
+ExtLink 183: DirNode[139]<->Router[43]
+DirNode  <orphan System>.ruby.dir_cntrl48
+ExtLink 184: DirNode[144]<->Router[48]
+DirNode  <orphan System>.ruby.dir_cntrl49
+ExtLink 185: DirNode[145]<->Router[49]
+DirNode  <orphan System>.ruby.dir_cntrl50
+ExtLink 186: DirNode[146]<->Router[50]
+DirNode  <orphan System>.ruby.dir_cntrl51
+ExtLink 187: DirNode[147]<->Router[51]
+DirNode  <orphan System>.ruby.dir_cntrl56
+ExtLink 188: DirNode[152]<->Router[56]
+DirNode  <orphan System>.ruby.dir_cntrl57
+ExtLink 189: DirNode[153]<->Router[57]
+DirNode  <orphan System>.ruby.dir_cntrl58
+ExtLink 190: DirNode[154]<->Router[58]
+DirNode  <orphan System>.ruby.dir_cntrl59
+ExtLink 191: DirNode[155]<->Router[59]
+IntLink 192: Router[32]->Router[33]
+IntLink 193: Router[33]->Router[34]
+IntLink 194: Router[34]->Router[35]
+IntLink 195: Router[40]->Router[41]
+IntLink 196: Router[41]->Router[42]
+IntLink 197: Router[42]->Router[43]
+IntLink 198: Router[48]->Router[49]
+IntLink 199: Router[49]->Router[50]
+IntLink 200: Router[50]->Router[51]
+IntLink 201: Router[56]->Router[57]
+IntLink 202: Router[57]->Router[58]
+IntLink 203: Router[58]->Router[59]
+IntLink 204: Router[33]->Router[32]
+IntLink 205: Router[34]->Router[33]
+IntLink 206: Router[35]->Router[34]
+IntLink 207: Router[41]->Router[40]
+IntLink 208: Router[42]->Router[41]
+IntLink 209: Router[43]->Router[42]
+IntLink 210: Router[49]->Router[48]
+IntLink 211: Router[50]->Router[49]
+IntLink 212: Router[51]->Router[50]
+IntLink 213: Router[57]->Router[56]
+IntLink 214: Router[58]->Router[57]
+IntLink 215: Router[59]->Router[58]
+IntLink 216: Router[32]->Router[40]
+IntLink 217: Router[33]->Router[41]
+IntLink 218: Router[34]->Router[42]
+IntLink 219: Router[35]->Router[43]
+IntLink 220: Router[40]->Router[48]
+IntLink 221: Router[41]->Router[49]
+IntLink 222: Router[42]->Router[50]
+IntLink 223: Router[43]->Router[51]
+IntLink 224: Router[48]->Router[56]
+IntLink 225: Router[49]->Router[57]
+IntLink 226: Router[50]->Router[58]
+IntLink 227: Router[51]->Router[59]
+IntLink 228: Router[40]->Router[32]
+IntLink 229: Router[41]->Router[33]
+IntLink 230: Router[42]->Router[34]
+IntLink 231: Router[43]->Router[35]
+IntLink 232: Router[48]->Router[40]
+IntLink 233: Router[49]->Router[41]
+IntLink 234: Router[50]->Router[42]
+IntLink 235: Router[51]->Router[43]
+IntLink 236: Router[56]->Router[48]
+IntLink 237: Router[57]->Router[49]
+IntLink 238: Router[58]->Router[50]
+IntLink 239: Router[59]->Router[51]
+ExtLink 240: CPUNode<->Router[36]
+ExtLink 241: CPUNode<->Router[37]
+ExtLink 242: CPUNode<->Router[38]
+ExtLink 243: CPUNode<->Router[39]
+ExtLink 244: CPUNode<->Router[44]
+ExtLink 245: CPUNode<->Router[45]
+ExtLink 246: CPUNode<->Router[46]
+ExtLink 247: CPUNode<->Router[47]
+ExtLink 248: CPUNode<->Router[52]
+ExtLink 249: CPUNode<->Router[53]
+ExtLink 250: CPUNode<->Router[54]
+ExtLink 251: CPUNode<->Router[55]
+ExtLink 252: CPUNode<->Router[60]
+ExtLink 253: CPUNode<->Router[61]
+ExtLink 254: CPUNode<->Router[62]
+ExtLink 255: CPUNode<->Router[63]
+DirNode  <orphan System>.ruby.dir_cntrl36
+ExtLink 256: DirNode[132]<->Router[36]
+DirNode  <orphan System>.ruby.dir_cntrl37
+ExtLink 257: DirNode[133]<->Router[37]
+DirNode  <orphan System>.ruby.dir_cntrl38
+ExtLink 258: DirNode[134]<->Router[38]
+DirNode  <orphan System>.ruby.dir_cntrl39
+ExtLink 259: DirNode[135]<->Router[39]
+DirNode  <orphan System>.ruby.dir_cntrl44
+ExtLink 260: DirNode[140]<->Router[44]
+DirNode  <orphan System>.ruby.dir_cntrl45
+ExtLink 261: DirNode[141]<->Router[45]
+DirNode  <orphan System>.ruby.dir_cntrl46
+ExtLink 262: DirNode[142]<->Router[46]
+DirNode  <orphan System>.ruby.dir_cntrl47
+ExtLink 263: DirNode[143]<->Router[47]
+DirNode  <orphan System>.ruby.dir_cntrl52
+ExtLink 264: DirNode[148]<->Router[52]
+DirNode  <orphan System>.ruby.dir_cntrl53
+ExtLink 265: DirNode[149]<->Router[53]
+DirNode  <orphan System>.ruby.dir_cntrl54
+ExtLink 266: DirNode[150]<->Router[54]
+DirNode  <orphan System>.ruby.dir_cntrl55
+ExtLink 267: DirNode[151]<->Router[55]
+DirNode  <orphan System>.ruby.dir_cntrl60
+ExtLink 268: DirNode[156]<->Router[60]
+DirNode  <orphan System>.ruby.dir_cntrl61
+ExtLink 269: DirNode[157]<->Router[61]
+DirNode  <orphan System>.ruby.dir_cntrl62
+ExtLink 270: DirNode[158]<->Router[62]
+DirNode  <orphan System>.ruby.dir_cntrl63
+ExtLink 271: DirNode[159]<->Router[63]
+IntLink 272: Router[36]->Router[37]
+IntLink 273: Router[37]->Router[38]
+IntLink 274: Router[38]->Router[39]
+IntLink 275: Router[44]->Router[45]
+IntLink 276: Router[45]->Router[46]
+IntLink 277: Router[46]->Router[47]
+IntLink 278: Router[52]->Router[53]
+IntLink 279: Router[53]->Router[54]
+IntLink 280: Router[54]->Router[55]
+IntLink 281: Router[60]->Router[61]
+IntLink 282: Router[61]->Router[62]
+IntLink 283: Router[62]->Router[63]
+IntLink 284: Router[37]->Router[36]
+IntLink 285: Router[38]->Router[37]
+IntLink 286: Router[39]->Router[38]
+IntLink 287: Router[45]->Router[44]
+IntLink 288: Router[46]->Router[45]
+IntLink 289: Router[47]->Router[46]
+IntLink 290: Router[53]->Router[52]
+IntLink 291: Router[54]->Router[53]
+IntLink 292: Router[55]->Router[54]
+IntLink 293: Router[61]->Router[60]
+IntLink 294: Router[62]->Router[61]
+IntLink 295: Router[63]->Router[62]
+IntLink 296: Router[36]->Router[44]
+IntLink 297: Router[37]->Router[45]
+IntLink 298: Router[38]->Router[46]
+IntLink 299: Router[39]->Router[47]
+IntLink 300: Router[44]->Router[52]
+IntLink 301: Router[45]->Router[53]
+IntLink 302: Router[46]->Router[54]
+IntLink 303: Router[47]->Router[55]
+IntLink 304: Router[52]->Router[60]
+IntLink 305: Router[53]->Router[61]
+IntLink 306: Router[54]->Router[62]
+IntLink 307: Router[55]->Router[63]
+IntLink 308: Router[44]->Router[36]
+IntLink 309: Router[45]->Router[37]
+IntLink 310: Router[46]->Router[38]
+IntLink 311: Router[47]->Router[39]
+IntLink 312: Router[52]->Router[44]
+IntLink 313: Router[53]->Router[45]
+IntLink 314: Router[54]->Router[46]
+IntLink 315: Router[55]->Router[47]
+IntLink 316: Router[60]->Router[52]
+IntLink 317: Router[61]->Router[53]
+IntLink 318: Router[62]->Router[54]
+IntLink 319: Router[63]->Router[55]
+IntLink 320: NoCRouter[0]->NoIRouter[64]
+IntLink 321: NoIRouter[64]->NoCRouter[0]
+IntLink 322: NoCRouter[1]->NoIRouter[65]
+IntLink 323: NoIRouter[65]->NoCRouter[1]
+IntLink 324: NoCRouter[2]->NoIRouter[65]
+IntLink 325: NoIRouter[65]->NoCRouter[2]
+IntLink 326: NoCRouter[3]->NoIRouter[66]
+IntLink 327: NoIRouter[66]->NoCRouter[3]
+IntLink 328: NoCRouter[4]->NoIRouter[66]
+IntLink 329: NoIRouter[66]->NoCRouter[4]
+IntLink 330: NoCRouter[5]->NoIRouter[67]
+IntLink 331: NoIRouter[67]->NoCRouter[5]
+IntLink 332: NoCRouter[6]->NoIRouter[67]
+IntLink 333: NoIRouter[67]->NoCRouter[6]
+IntLink 334: NoCRouter[7]->NoIRouter[68]
+IntLink 335: NoIRouter[68]->NoCRouter[7]
+IntLink 336: NoCRouter[8]->NoIRouter[64]
+IntLink 337: NoIRouter[64]->NoCRouter[8]
+IntLink 338: NoCRouter[9]->NoIRouter[65]
+IntLink 339: NoIRouter[65]->NoCRouter[9]
+IntLink 340: NoCRouter[10]->NoIRouter[65]
+IntLink 341: NoIRouter[65]->NoCRouter[10]
+IntLink 342: NoCRouter[11]->NoIRouter[66]
+IntLink 343: NoIRouter[66]->NoCRouter[11]
+IntLink 344: NoCRouter[12]->NoIRouter[66]
+IntLink 345: NoIRouter[66]->NoCRouter[12]
+IntLink 346: NoCRouter[13]->NoIRouter[67]
+IntLink 347: NoIRouter[67]->NoCRouter[13]
+IntLink 348: NoCRouter[14]->NoIRouter[67]
+IntLink 349: NoIRouter[67]->NoCRouter[14]
+IntLink 350: NoCRouter[15]->NoIRouter[68]
+IntLink 351: NoIRouter[68]->NoCRouter[15]
+IntLink 352: NoCRouter[16]->NoIRouter[69]
+IntLink 353: NoIRouter[69]->NoCRouter[16]
+IntLink 354: NoCRouter[17]->NoIRouter[70]
+IntLink 355: NoIRouter[70]->NoCRouter[17]
+IntLink 356: NoCRouter[18]->NoIRouter[70]
+IntLink 357: NoIRouter[70]->NoCRouter[18]
+IntLink 358: NoCRouter[19]->NoIRouter[71]
+IntLink 359: NoIRouter[71]->NoCRouter[19]
+IntLink 360: NoCRouter[20]->NoIRouter[71]
+IntLink 361: NoIRouter[71]->NoCRouter[20]
+IntLink 362: NoCRouter[21]->NoIRouter[72]
+IntLink 363: NoIRouter[72]->NoCRouter[21]
+IntLink 364: NoCRouter[22]->NoIRouter[72]
+IntLink 365: NoIRouter[72]->NoCRouter[22]
+IntLink 366: NoCRouter[23]->NoIRouter[73]
+IntLink 367: NoIRouter[73]->NoCRouter[23]
+IntLink 368: NoCRouter[24]->NoIRouter[69]
+IntLink 369: NoIRouter[69]->NoCRouter[24]
+IntLink 370: NoCRouter[25]->NoIRouter[70]
+IntLink 371: NoIRouter[70]->NoCRouter[25]
+IntLink 372: NoCRouter[26]->NoIRouter[70]
+IntLink 373: NoIRouter[70]->NoCRouter[26]
+IntLink 374: NoCRouter[27]->NoIRouter[71]
+IntLink 375: NoIRouter[71]->NoCRouter[27]
+IntLink 376: NoCRouter[28]->NoIRouter[71]
+IntLink 377: NoIRouter[71]->NoCRouter[28]
+IntLink 378: NoCRouter[29]->NoIRouter[72]
+IntLink 379: NoIRouter[72]->NoCRouter[29]
+IntLink 380: NoCRouter[30]->NoIRouter[72]
+IntLink 381: NoIRouter[72]->NoCRouter[30]
+IntLink 382: NoCRouter[31]->NoIRouter[73]
+IntLink 383: NoIRouter[73]->NoCRouter[31]
+IntLink 384: NoCRouter[32]->NoIRouter[74]
+IntLink 385: NoIRouter[74]->NoCRouter[32]
+IntLink 386: NoCRouter[33]->NoIRouter[75]
+IntLink 387: NoIRouter[75]->NoCRouter[33]
+IntLink 388: NoCRouter[34]->NoIRouter[75]
+IntLink 389: NoIRouter[75]->NoCRouter[34]
+IntLink 390: NoCRouter[35]->NoIRouter[76]
+IntLink 391: NoIRouter[76]->NoCRouter[35]
+IntLink 392: NoCRouter[36]->NoIRouter[76]
+IntLink 393: NoIRouter[76]->NoCRouter[36]
+IntLink 394: NoCRouter[37]->NoIRouter[77]
+IntLink 395: NoIRouter[77]->NoCRouter[37]
+IntLink 396: NoCRouter[38]->NoIRouter[77]
+IntLink 397: NoIRouter[77]->NoCRouter[38]
+IntLink 398: NoCRouter[39]->NoIRouter[78]
+IntLink 399: NoIRouter[78]->NoCRouter[39]
+IntLink 400: NoCRouter[40]->NoIRouter[74]
+IntLink 401: NoIRouter[74]->NoCRouter[40]
+IntLink 402: NoCRouter[41]->NoIRouter[75]
+IntLink 403: NoIRouter[75]->NoCRouter[41]
+IntLink 404: NoCRouter[42]->NoIRouter[75]
+IntLink 405: NoIRouter[75]->NoCRouter[42]
+IntLink 406: NoCRouter[43]->NoIRouter[76]
+IntLink 407: NoIRouter[76]->NoCRouter[43]
+IntLink 408: NoCRouter[44]->NoIRouter[76]
+IntLink 409: NoIRouter[76]->NoCRouter[44]
+IntLink 410: NoCRouter[45]->NoIRouter[77]
+IntLink 411: NoIRouter[77]->NoCRouter[45]
+IntLink 412: NoCRouter[46]->NoIRouter[77]
+IntLink 413: NoIRouter[77]->NoCRouter[46]
+IntLink 414: NoCRouter[47]->NoIRouter[78]
+IntLink 415: NoIRouter[78]->NoCRouter[47]
+IntLink 416: NoCRouter[48]->NoIRouter[79]
+IntLink 417: NoIRouter[79]->NoCRouter[48]
+IntLink 418: NoCRouter[49]->NoIRouter[80]
+IntLink 419: NoIRouter[80]->NoCRouter[49]
+IntLink 420: NoCRouter[50]->NoIRouter[80]
+IntLink 421: NoIRouter[80]->NoCRouter[50]
+IntLink 422: NoCRouter[51]->NoIRouter[81]
+IntLink 423: NoIRouter[81]->NoCRouter[51]
+IntLink 424: NoCRouter[52]->NoIRouter[81]
+IntLink 425: NoIRouter[81]->NoCRouter[52]
+IntLink 426: NoCRouter[53]->NoIRouter[82]
+IntLink 427: NoIRouter[82]->NoCRouter[53]
+IntLink 428: NoCRouter[54]->NoIRouter[82]
+IntLink 429: NoIRouter[82]->NoCRouter[54]
+IntLink 430: NoCRouter[55]->NoIRouter[83]
+IntLink 431: NoIRouter[83]->NoCRouter[55]
+IntLink 432: NoCRouter[56]->NoIRouter[79]
+IntLink 433: NoIRouter[79]->NoCRouter[56]
+IntLink 434: NoCRouter[57]->NoIRouter[80]
+IntLink 435: NoIRouter[80]->NoCRouter[57]
+IntLink 436: NoCRouter[58]->NoIRouter[80]
+IntLink 437: NoIRouter[80]->NoCRouter[58]
+IntLink 438: NoCRouter[59]->NoIRouter[81]
+IntLink 439: NoIRouter[81]->NoCRouter[59]
+IntLink 440: NoCRouter[60]->NoIRouter[81]
+IntLink 441: NoIRouter[81]->NoCRouter[60]
+IntLink 442: NoCRouter[61]->NoIRouter[82]
+IntLink 443: NoIRouter[82]->NoCRouter[61]
+IntLink 444: NoCRouter[62]->NoIRouter[82]
+IntLink 445: NoIRouter[82]->NoCRouter[62]
+IntLink 446: NoCRouter[63]->NoIRouter[83]
+IntLink 447: NoIRouter[83]->NoCRouter[63]
+IntLink 448: NoIRouter[64]->NoIRouter[65]
+IntLink 449: NoIRouter[65]->NoIRouter[64]
+IntLink 450: NoIRouter[67]->NoIRouter[68]
+IntLink 451: NoIRouter[68]->NoIRouter[67]
+IntLink 452: NoIRouter[69]->NoIRouter[70]
+IntLink 453: NoIRouter[70]->NoIRouter[69]
+IntLink 454: NoIRouter[72]->NoIRouter[73]
+IntLink 455: NoIRouter[73]->NoIRouter[72]
+IntLink 456: NoIRouter[74]->NoIRouter[75]
+IntLink 457: NoIRouter[75]->NoIRouter[74]
+IntLink 458: NoIRouter[77]->NoIRouter[78]
+IntLink 459: NoIRouter[78]->NoIRouter[77]
+IntLink 460: NoIRouter[79]->NoIRouter[80]
+IntLink 461: NoIRouter[80]->NoIRouter[79]
+IntLink 462: NoIRouter[82]->NoIRouter[83]
+IntLink 463: NoIRouter[83]->NoIRouter[82]
+IntLink 464: NoIRouter[64]->NoIRouter[69]
+IntLink 465: NoIRouter[69]->NoIRouter[64]
+IntLink 466: NoIRouter[74]->NoIRouter[79]
+IntLink 467: NoIRouter[79]->NoIRouter[74]
+IntLink 468: NoIRouter[68]->NoIRouter[73]
+IntLink 469: NoIRouter[73]->NoIRouter[68]
+IntLink 470: NoIRouter[78]->NoIRouter[83]
+IntLink 471: NoIRouter[83]->NoIRouter[78]
+IntLink 472: NoIRouter[64]->NoIRouter[75]
+IntLink 473: NoIRouter[75]->NoIRouter[64]
+IntLink 473: NoIRouter[79]->NoIRouter[70]
+IntLink 474: NoIRouter[70]->NoIRouter[79]
+IntLink 474: NoIRouter[68]->NoIRouter[77]
+IntLink 475: NoIRouter[77]->NoIRouter[68]
+IntLink 475: NoIRouter[83]->NoIRouter[72]
+IntLink 476: NoIRouter[72]->NoIRouter[83]
+IntLink 476: NoIRouter[64]->NoIRouter[71]
+IntLink 477: NoIRouter[71]->NoIRouter[64]
+IntLink 477: NoIRouter[79]->NoIRouter[76]
+IntLink 478: NoIRouter[76]->NoIRouter[79]
+IntLink 478: NoIRouter[68]->NoIRouter[71]
+IntLink 479: NoIRouter[71]->NoIRouter[68]
+IntLink 479: NoIRouter[83]->NoIRouter[76]
+IntLink 480: NoIRouter[76]->NoIRouter[83]
+IntLink 480: NoIRouter[69]->NoIRouter[76]
+IntLink 481: NoIRouter[76]->NoIRouter[69]
+IntLink 481: NoIRouter[74]->NoIRouter[71]
+IntLink 482: NoIRouter[71]->NoIRouter[74]
+IntLink 482: NoIRouter[73]->NoIRouter[76]
+IntLink 483: NoIRouter[76]->NoIRouter[73]
+IntLink 483: NoIRouter[78]->NoIRouter[71]
+IntLink 484: NoIRouter[71]->NoIRouter[78]
+IntLink 484: NoIRouter[65]->NoIRouter[72]
+IntLink 485: NoIRouter[72]->NoIRouter[65]
+IntLink 485: NoIRouter[70]->NoIRouter[67]
+IntLink 486: NoIRouter[67]->NoIRouter[70]
+IntLink 486: NoIRouter[75]->NoIRouter[82]
+IntLink 487: NoIRouter[82]->NoIRouter[75]
+IntLink 487: NoIRouter[80]->NoIRouter[77]
+IntLink 488: NoIRouter[77]->NoIRouter[80]
+IntLink 488: NoIRouter[66]->NoIRouter[69]
+IntLink 489: NoIRouter[69]->NoIRouter[66]
+IntLink 489: NoIRouter[66]->NoIRouter[75]
+IntLink 490: NoIRouter[75]->NoIRouter[66]
+IntLink 490: NoIRouter[66]->NoIRouter[77]
+IntLink 491: NoIRouter[77]->NoIRouter[66]
+IntLink 491: NoIRouter[66]->NoIRouter[73]
+IntLink 492: NoIRouter[73]->NoIRouter[66]
+IntLink 492: NoIRouter[81]->NoIRouter[74]
+IntLink 493: NoIRouter[74]->NoIRouter[81]
+IntLink 493: NoIRouter[81]->NoIRouter[70]
+IntLink 494: NoIRouter[70]->NoIRouter[81]
+IntLink 494: NoIRouter[81]->NoIRouter[72]
+IntLink 495: NoIRouter[72]->NoIRouter[81]
+IntLink 495: NoIRouter[81]->NoIRouter[78]
+IntLink 496: NoIRouter[78]->NoIRouter[81]
+mc_id 64
+noi_router 64
+MCNode  <orphan System>.ruby.l2_cntrl0
+ExtLink 496: MCNode[64]<->Router[64]
+total_cpus + mc_id 160
+noi_router 64
+DirMcNode  <orphan System>.ruby.dir_cntrl64
+ExtLink 497: DirMCNode[160]<->Router[64]
+mc_id 65
+noi_router 64
+MCNode  <orphan System>.ruby.l2_cntrl1
+ExtLink 498: MCNode[65]<->Router[64]
+total_cpus + mc_id 161
+noi_router 64
+DirMcNode  <orphan System>.ruby.dir_cntrl65
+ExtLink 499: DirMCNode[161]<->Router[64]
+mc_id 66
+noi_router 64
+MCNode  <orphan System>.ruby.l2_cntrl2
+ExtLink 500: MCNode[66]<->Router[64]
+total_cpus + mc_id 162
+noi_router 64
+DirMcNode  <orphan System>.ruby.dir_cntrl66
+ExtLink 501: DirMCNode[162]<->Router[64]
+mc_id 67
+noi_router 64
+MCNode  <orphan System>.ruby.l2_cntrl3
+ExtLink 502: MCNode[67]<->Router[64]
+total_cpus + mc_id 163
+noi_router 64
+DirMcNode  <orphan System>.ruby.dir_cntrl67
+ExtLink 503: DirMCNode[163]<->Router[64]
+mc_id 68
+noi_router 69
+MCNode  <orphan System>.ruby.l2_cntrl4
+ExtLink 504: MCNode[68]<->Router[69]
+total_cpus + mc_id 164
+noi_router 69
+DirMcNode  <orphan System>.ruby.dir_cntrl68
+ExtLink 505: DirMCNode[164]<->Router[69]
+mc_id 69
+noi_router 69
+MCNode  <orphan System>.ruby.l2_cntrl5
+ExtLink 506: MCNode[69]<->Router[69]
+total_cpus + mc_id 165
+noi_router 69
+DirMcNode  <orphan System>.ruby.dir_cntrl69
+ExtLink 507: DirMCNode[165]<->Router[69]
+mc_id 70
+noi_router 69
+MCNode  <orphan System>.ruby.l2_cntrl6
+ExtLink 508: MCNode[70]<->Router[69]
+total_cpus + mc_id 166
+noi_router 69
+DirMcNode  <orphan System>.ruby.dir_cntrl70
+ExtLink 509: DirMCNode[166]<->Router[69]
+mc_id 71
+noi_router 69
+MCNode  <orphan System>.ruby.l2_cntrl7
+ExtLink 510: MCNode[71]<->Router[69]
+total_cpus + mc_id 167
+noi_router 69
+DirMcNode  <orphan System>.ruby.dir_cntrl71
+ExtLink 511: DirMCNode[167]<->Router[69]
+mc_id 72
+noi_router 74
+MCNode  <orphan System>.ruby.l2_cntrl8
+ExtLink 512: MCNode[72]<->Router[74]
+total_cpus + mc_id 168
+noi_router 74
+DirMcNode  <orphan System>.ruby.dir_cntrl72
+ExtLink 513: DirMCNode[168]<->Router[74]
+mc_id 73
+noi_router 74
+MCNode  <orphan System>.ruby.l2_cntrl9
+ExtLink 514: MCNode[73]<->Router[74]
+total_cpus + mc_id 169
+noi_router 74
+DirMcNode  <orphan System>.ruby.dir_cntrl73
+ExtLink 515: DirMCNode[169]<->Router[74]
+mc_id 74
+noi_router 74
+MCNode  <orphan System>.ruby.l2_cntrl10
+ExtLink 516: MCNode[74]<->Router[74]
+total_cpus + mc_id 170
+noi_router 74
+DirMcNode  <orphan System>.ruby.dir_cntrl74
+ExtLink 517: DirMCNode[170]<->Router[74]
+mc_id 75
+noi_router 74
+MCNode  <orphan System>.ruby.l2_cntrl11
+ExtLink 518: MCNode[75]<->Router[74]
+total_cpus + mc_id 171
+noi_router 74
+DirMcNode  <orphan System>.ruby.dir_cntrl75
+ExtLink 519: DirMCNode[171]<->Router[74]
+mc_id 76
+noi_router 79
+MCNode  <orphan System>.ruby.l2_cntrl12
+ExtLink 520: MCNode[76]<->Router[79]
+total_cpus + mc_id 172
+noi_router 79
+DirMcNode  <orphan System>.ruby.dir_cntrl76
+ExtLink 521: DirMCNode[172]<->Router[79]
+mc_id 77
+noi_router 79
+MCNode  <orphan System>.ruby.l2_cntrl13
+ExtLink 522: MCNode[77]<->Router[79]
+total_cpus + mc_id 173
+noi_router 79
+DirMcNode  <orphan System>.ruby.dir_cntrl77
+ExtLink 523: DirMCNode[173]<->Router[79]
+mc_id 78
+noi_router 79
+MCNode  <orphan System>.ruby.l2_cntrl14
+ExtLink 524: MCNode[78]<->Router[79]
+total_cpus + mc_id 174
+noi_router 79
+DirMcNode  <orphan System>.ruby.dir_cntrl78
+ExtLink 525: DirMCNode[174]<->Router[79]
+mc_id 79
+noi_router 79
+MCNode  <orphan System>.ruby.l2_cntrl15
+ExtLink 526: MCNode[79]<->Router[79]
+total_cpus + mc_id 175
+noi_router 79
+DirMcNode  <orphan System>.ruby.dir_cntrl79
+ExtLink 527: DirMCNode[175]<->Router[79]
+mc_id 80
+mc_id 80
+noi_router 68
+MCNode  <orphan System>.ruby.l2_cntrl16
+ExtLink 528: MCNode[80]<->Router[68]

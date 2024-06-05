@@ -340,7 +340,7 @@ def create_system(
     #     options, network, IntLinkClass, ExtLinkClass, RouterClass
     # )
     topology.makeTopology(
-        options, full_system, network, IntLinkClass, ExtLinkClass, RouterClass
+        options, network, IntLinkClass, ExtLinkClass, RouterClass
     )
     # Register the topology elements with faux filesystem (SE mode only)
     if not full_system:
