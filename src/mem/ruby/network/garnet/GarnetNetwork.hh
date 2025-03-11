@@ -202,6 +202,8 @@ class GarnetNetwork : public Network
 
     std::vector<std::vector<statistics::Scalar *>> m_data_traffic_distribution;
     std::vector<std::vector<statistics::Scalar *>> m_ctrl_traffic_distribution;
+    //get every link utilization
+    std::vector<statistics::Scalar *> m_int_link_utilization;
 
   private:
     GarnetNetwork(const GarnetNetwork& obj);

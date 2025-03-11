@@ -60,7 +60,7 @@ class SimpleChiplet(SimpleTopology):
         mem_ctrls = options.num_mem_ctrls
 
         # One extra router for extra routers, if any
-        total_routers = num_noc_routers + num_noi_routers + 1
+        total_routers = num_noc_routers + num_noi_routers
         total_cpus = options.num_cpus + options.num_mem_ctrls
 
         # Create the routers in the topology
@@ -140,7 +140,7 @@ class SimpleChiplet(SimpleTopology):
                                 ext_node=network_nodes[total_cpus + core_id],
                                 int_node=routers[core_id],
                                 width=ext_link_width,
-                                clk_domain=chiplet_clk_domain,
+                                clk_domain=chiplet_clk_domain,  
                                 latency=link_latency,
                             )
                         )

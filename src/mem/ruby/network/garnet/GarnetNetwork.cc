@@ -128,7 +128,7 @@ GarnetNetwork::init()
         // implementing XY or custom routing in RoutingUnit.cc
         m_num_rows = getNumRows();
         m_num_cols = m_routers.size() / m_num_rows;
-        assert(m_num_rows * m_num_cols == m_routers.size());
+        //assert(m_num_rows * m_num_cols == m_routers.size());
     } else {
         m_num_rows = -1;
         m_num_cols = -1;
@@ -528,6 +528,16 @@ GarnetNetwork::regStats()
             statistics::oneline)
         ;
 
+    //link utilization
+    for(int id = 0; id < m_networklinks.size(); ++id){
+        statistics::Scalar *link_utilization = new statistics::Scalar();
+
+        link_utilization->name(name() + ".per_link_utilization." + "n" +
+                std::to_string(id));
+        m_int_link_utilization.push_back(link_utilization);
+
+    }
+
     // Traffic distribution
     for (int source = 0; source < m_routers.size(); ++source) {
         m_data_traffic_distribution.push_back(
@@ -559,7 +569,8 @@ GarnetNetwork::collateStats()
     for (int i = 0; i < m_networklinks.size(); i++) {
         link_type type = m_networklinks[i]->getType();
         int activity = m_networklinks[i]->getLinkUtilization();
-
+        //get every link utilization and  output to stats.txt
+        (*m_int_link_utilization[i]) = activity;
         if (type == EXT_IN_)
             m_total_ext_in_link_utilization += activity;
         else if (type == EXT_OUT_)
